@@ -32,7 +32,9 @@ def min(a, b):
 # count the positive results
 def count():
     x1, x2 = solve_the_eq(a, b, c)
-    count = int(max(x1, x2)) - int(min(x1, x2))
+    max_x = max(x1, x2) - 0.1 if max(x1, x2) > 0 else max(x1, x2) + 0.1
+    min_x = min(x1, x2) - 0.1 if min(x1, x2) > 0 else min(x1, x2) + 0.1
+    count = int(max_x) - int(min_x)
     if x1 / x2 < 0:
         count += 1
     return count
