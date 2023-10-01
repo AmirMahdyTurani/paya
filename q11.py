@@ -18,10 +18,15 @@ for req in reqs:
 print("-"*25)
 
 for  name ,(org, des) in req_dict.items():
-    if (des, org) in req_dict.values():
-        for name2 in req_dict.keys():
+    if req_dict[name] == (None, None):
+        continue
+    if (des, org) in req_dict.values():        
+        print(f"{name} can move succesfully.")
+        req_dict[name] = (None, None)
+        for name2 in req_dict:
             if req_dict[name2] == (des, org):
-                print(f"{name} can move succesfully from {org} to {des} beacuse of {name2} who wants to move from {des} to {org}")
-                req_dict[name2] = ("used.", "used.")
+                print(f"{name2} can move succesfully.")
+                req_dict[name2] = (None, None)
+                break
     else:
-        print(f"{name} can not move beacuse no one have not wanted to move from {des} to {org}.")
+        print(f"{name} can not move.")

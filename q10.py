@@ -1,6 +1,6 @@
 # reading the data from user
 m = int(input("Please Enter the price of stuff: "))
-x = int(input("how much does posting it cost for you: "))
+x = int(input("How much does posting it cost for you: "))
 n = int(input("Enter the off percentage(%): "))
 
 # calculating the benefit percentage with math operations
