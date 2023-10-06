@@ -5,5 +5,5 @@ the questions of Paya league
  - [x] select the theme for powerpoint
  - [x] select a name for the group
  - [x] solve the question 5
- - [ ] create the presentation
- - [ ] Being happy :)  
+ - [x] create the presentation
+ - [x] Being happy :)  
