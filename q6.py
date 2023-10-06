@@ -8,6 +8,9 @@ def calculate_min_percent(n, z):
     global_profit_needed = percent_to_get_to(buy_money, target_money)
     return global_profit_needed * 100
 
+def round(number, digit):
+    return int(number * (10**digit)) / 100
+
 n = int(input("enter N: "))
 z = int(input("enter Z: "))
 
