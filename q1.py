@@ -32,8 +32,8 @@ def min(a, b):
 # count the positive results
 def count():
     x1, x2 = solve_the_eq(a, b, c)
-    max_x = max(x1, x2) - 0.1 if max(x1, x2) > 0 else max(x1, x2) + 0.1
-    min_x = min(x1, x2) - 0.1 if min(x1, x2) > 0 else min(x1, x2) + 0.1
+    max_x = max(x1, x2) - 0.1 if max(x1, x2) % 1 == 0 else max(x1, x2)
+    min_x = min(x1, x2) + 0.1 if min(x1, x2) % 1 == 0 else min(x1, x2)
     count = int(max_x) - int(min_x)
     if x1 / x2 < 0:
         count += 1
